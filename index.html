@@ -1,22 +1,288 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
+<!-- TO DO
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  * {box-sizing: border-box;}
+
+- Fix display on small viewports 
+-->
+
+<title>Personal Portofolio Website</title>
 
 <head>
-<title>Personal Webpage</title>
-<style>
-
-</style>
-
-<script></script>
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://use.fontawesome.com/fc9f328e90.js"></script>
 </head>
 
+<style>
+@media screen and (min-width: 800px) {
+  
+  nav li {
+    float: left;
+    margin-right: 15%;
+  }
+
+  nav li a {
+    display: block;
+    color: #EEE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+}
+
+@media screen and (max-width: 799px) {
+ 
+  nav li {
+    float: left;
+    margin-right: 5%;
+  }
+
+  nav li a {
+    display: block;
+    color: #EEE;
+    text-align: center;
+    padding: 2px 4px;
+    text-decoration: none;
+  }
+
+}
+ 
+  body {
+    font-family: Bookman, Sans-serif;
+  }
+
+  #navbar {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    color: white;
+    width: 100%;
+    background-color: orange;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: orange;
+    width: 100%;
+  }
+
+  nav li a:hover {
+    background-color: #ddd;
+  }
+
+  #welcome-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    background-color: #FFFFFF;
+    height: 100vh;
+    justify-content: space-around;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    color: darkblue;
+    text-align: center;
+  }
+
+  h3 {
+    color: darkblue;
+    text-align: center;
+  }
+
+  h4 {
+    color: darkblue;
+    text-align: center;
+  }
+  
+  #contact {
+    padding: 10px;
+    background-color: #FFFFFF;
+  }
+
+  #projects {
+    width: 100%;
+    background-color: #6495ED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-tile {
+    text-decoration: none;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+   }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    padding-bottom: 25%;
+  }
+
+  .contact {
+    font-size: 48px;
+    color: blue;
+    align-items: center;
+  }
+
+  #byline {
+    margin: auto;
+    text-align: center;
+  }
+
+  .project_title {
+    text-decoration: none;
+    color: darkblue;
+  }
+
+  .project_group {
+    border: 2px solid blue;
+    padding: 5%;
+  }
+}
+</style>
+
 <body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section">Welcome</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<div id="intro">
-<h1>Brian Wilkey</h1>
-<p>Greetings!  Welcome to my site.  I'm still working on it, so please come back often to see what changes!"
+  <div id="welcome-section">
+    <div id="welcome-name">
+      <h1>Brian Wilkey</h1>
+      <h1>Colonel, USAF (Retired)</h1>
+    </div>
+    <div id="welcome-message">
+      <h2>electrical engineer, software developer, web designer, woodworker, photographer</h2>
+      <p>Having retired from active duty, I am exploring my creative side! My interests are somewhat diverse, but I'm focusing my efforts on updating my computer skills inbetween woodworking and home improvement projects. On this page, I have posted some
+        samples of my various projects. Please have a look around, and if you feel so inclined, use the links <a href="#contact">below</a> to drop me a line. Thanks for visiting!</p>
+    </div>
+  </div>
 
+  <div id="projects" class="w3-container"><br><br>
+    <h2>Projects</h2><br>
+    <div id="web_design" class="project_group">
+      <h3>Web Design</h3><br>
+      <div id="web_design1" class="w3-row">
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Tribute Page</h4></div>
+          <a href="https://codepen.io/BWilkey/live/jLLWpm"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Tribute%20Page.jpg" title="Tribute Page" alt="Screen shot of Tribute Page project from FreeCodeCamp about Mike the Dog"></a>
+        </div>
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Survey Form</h4></div>
+          <a href="https://codepen.io/BWilkey/live/ZJaBJr"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Survey%20Form.jpg" title="Survey Form" alt="Screen shot of Survey Form project from FreeCodeCamp"></a>
+        </div>
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Quote Machine</h4></div>
+          <a href="https://codepen.io/BWilkey/live/yOweor"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Random_Quote_Machine_Screenshot.png" title="Random Quote Machine" alt="Screen shot from Random Quote Machine project from FreeCodeCamp"></a>
+        </div>
+      </div>
+      <br>
+      <div id="web_design2" class="w3-row">
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Simon Game</h4></div>
+          <a href="https://codepen.io/BWilkey/live/WGAKxr"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/FCC_Simon_Game.png" title="Tribute Page" alt="Screen shot of Tribute Page project from FreeCodeCamp about Mike the Dog"></a>
+        </div>
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Pomodoro Clock</h4></div>
+          <a href="https://codepen.io/BWilkey/live/dXxLdX"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/FCC_Pomodoro_Clock.png" title="Survey Form" alt="Screen shot of Survey Form project from FreeCodeCamp"></a>
+        </div>
+        <div class="w3-third">
+          <div class="project_title"><h4>FCC: Wiki Viewer</h4></div>
+          <a href="https://codepen.io/BWilkey/live/GZbjjJ"><img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/FCC_Wiki_Viewer.png" title="Random Quote Machine" alt="Screen shot from Random Quote Machine project from FreeCodeCamp"></a>
+        </div>
+      </div>
+      <h4>To see more of my coding projects, click <a href="https://codepen.io/BWilkey/pens/public/" target="_blank">here.</a></h4><br>
+    </div>
+
+    <br><br>
+    <div id="woodworking" class="w3-row-padding project_group">
+      <h3>Wood Working</h3><br>
+      <div class="w3-third">
+        <div class="project_title"><h4>Kitchen Island</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/kitchen_Island.jpg" title="Photo: Custom Made Kitchen Island" alt="Photo of white custom-made kitchen island with black granite top"></div>
+      <div class="w3-third">
+        <div class="project_title"><h4>Picnic Table</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Bar_Height_Picnic_Table.JPG" title="Photo: Bar height picnic table" alt="Photo of bar height picnic table with integrated seats"></div>
+      <div class="w3-third">
+        <div class="project_title"><h4>Bar Stool</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Barstool.png" title="Photo: Custom wood bar stool" alt="Photo of custom-made wood bar stool wtih red seat"></div>
+    </div>
+
+    <br><br>
+    <div id="photography" class="w3-row-padding project_group">
+      <h3>Photography</h3><br>
+      <div class="w3-third">
+        <div class="project_title"><h4>Coulter Lake Colorado</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Coulter_Lake_CO.jpg" title="Bar-height Picnic Table" alt="Photo of wood bar-height picnic table with four built-in seats"></div>
+      <div class="w3-third">
+        <div class="project_title"><h4>Mike In The Grass</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Mike_in_the_Grass_low.jpg" title="Portrait of Mike" alt="Portrait of Mike the Dog lying in the grass"></div>
+      <div class="w3-third">
+        <div class="project_title"><h4>Spa Time</h4></div>
+        <img class="project-tile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/591004/Max_and_Mike_in_Spa_low.jpg" title="Max and Mike in the Spa" alt="Portrait of two dogs in a pool spa"></div>
+      <br>
+    </div>
+<br>
+  </div>
+  <br>
+
+  <div id="contact">
+    <br><br><br><br><br>
+    <h2>Contact</h2>
+    <h3 id="description">For more information, please send me an <a href="MAILTO:brian.wilkey@icloud.com">email</a> or you can reach me at <a href="https://www.linkedin.com/in/brianwilkey" target="_blank">LinkedIn</a>, <a href="https://www.facebook.com/brian.wilkey.7" target="_blank">Facebook</a>, <a href="https://github.com/BWilkey" target="_blank">GitHub</a>, or <a href="https://twitter.com/BWilkey2016" target="_blank">Twitter</a>:</h3>
+    <br><br>
+    <div id="email_btn" class="w3-content contact" text-align="center">
+      <a href="MAILTO:brian.wilkey@icloud.com"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
+    </div>
+    <br><br>
+    <div class="w3-row-padding">
+      <div id="linkedin_btn" class="w3-quarter contact">
+        <a href="https://www.linkedin.com/in/brianwilkey" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </div>
+      <div id="facebook_btn" class="w3-quarter contact">
+        <a href="https://www.facebook.com/brian.wilkey.7" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true">  </i></a>
+      </div>
+      <div id="github_btn" class="w3-quarter contact">
+        <a href="https://github.com/BWilkey" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+      </div>
+      <div id="twitter_btn" class="w3-quarter contact">
+        <a href="https://twitter.com/BWilkey2016" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <br><br>
+    <div>
+      <h5><i>Page by <a href="https://www.freecodecamp.com/bwilkey" target="_blank" id="profile-link"> BWilkey  </a>&copy; 2017</i></h5>
+    </div>
+  </div>
 
 </body>
+
+
 
